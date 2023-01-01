@@ -337,7 +337,7 @@
 			<item name="gunShotgunBrokenPumpShotgun" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupGunShotgunT3AutoShotgun" loot_quality_template="QLTemplateT3">
-			<item name="gunShotgunT3AutoShotgun"/>
+			<item name="gunShotgunT3AutoShotgun" loot_prob_template="medLow" force_prob="true"/>
 			<item name="gunShotgunBrokenAutoShotgun" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupGunRifleT1HuntingRifle" loot_quality_template="QLTemplateT1">
@@ -365,31 +365,35 @@
 			<item name="gunMGBrokenM60" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnKnucklesT0LeatherKnuckles" loot_quality_template="QLTemplateT0">
-			<item name="meleeWpnKnucklesT0LeatherKnuckles"/>
+			<item name="meleeWpnKnucklesT0LeatherKnuckles" loot_prob_template="medLow" force_prob="true"/>
+			<item name="meleeWpnKnucklesBrokenLeatherKnuckles" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnKnucklesT1IronKnuckles" loot_quality_template="QLTemplateT1">
-			<item name="meleeWpnKnucklesT1IronKnuckles"/>
+			<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="medLow" force_prob="true"/>
+			<item name="meleeWpnKnucklesBrokenIronKnuckles" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupMeleeWpnKnucklesT3SteelKnuckles" loot_quality_template="QLTemplateT2">
-			<item name="meleeWpnKnucklesT3SteelKnuckles"/>
+			<item name="meleeWpnKnucklesT3SteelKnuckles" loot_prob_template="medLow" force_prob="true"/>
+			<item name="meleeWpnKnucklesBrokenSteelKnuckles" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>		
 		<lootgroup name="groupGunBowT0PrimitiveBow" loot_quality_template="QLTemplateT0">
-			<item name="gunBowT0PrimitiveBow"/>
+			<item name="gunBowT0PrimitiveBow" loot_prob_template="medLow" force_prob="true"/>
+			<item name="gunBowBrokenPrimitiveBow" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupGunBowT1WoodenBow" loot_quality_template="QLTemplateT1">
-			<item name="gunBowT1WoodenBow" loot_prob_template="medLow"/>
+			<item name="gunBowT1WoodenBow" loot_prob_template="medLow" force_prob="true"/>
 			<item name="gunBowBrokenWoodenBow" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupGunBowT3CompoundBow" loot_quality_template="QLTemplateT2">
-			<item name="gunBowT3CompoundBow" loot_prob_template="medLow"/>
+			<item name="gunBowT3CompoundBow" loot_prob_template="medLow" force_prob="true"/>
 			<item name="gunBowBrokenCompoundBow" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupGunBowT1IronCrossbow" loot_quality_template="QLTemplateT1">
-			<item name="gunBowT1IronCrossbow" loot_prob_template="medLow"/>
+			<item name="gunBowT1IronCrossbow" loot_prob_template="medLow" force_prob="true"/>
 			<item name="gunBowBrokenIronCrossbow" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>
 		<lootgroup name="groupGunT3CompoundCrossbow" loot_quality_template="QLTemplateT2">
-			<item name="gunBowT3CompoundCrossbow" loot_prob_template="medLow"/>
+			<item name="gunBowT3CompoundCrossbow" loot_prob_template="medLow" force_prob="true"/>
 			<item name="gunBowBrokenCompoundCrossbow" loot_prob_template="high" force_prob="true"/>
 		</lootgroup>	
 		
@@ -616,11 +620,12 @@
 		</lootgroup>		
 		<lootgroup name="groupUncommonOrganicResources">
 			<item name="resourceScrapIron" count="0,20"/>
-			<item name="foodCropCorn" count="1,2"/>
+			<item name="foodCropCorn" count="1,5"/>
+			<item name="foodCropPotato" count="1,2"/>
 			<item name="foodEgg" count="1,3"/>
 		</lootgroup>	
 		<lootgroup name="groupRareOrganicResources">
-			<item name="foodCropPotato" count="1,2"/>
+			<item name="foodCropPotato" count="2,5"/>
 			<item name="foodCropMushrooms" count="1,2"/>
 		</lootgroup>
 		<lootgroup name="groupLowerMed">
@@ -775,8 +780,7 @@
 		<!-- Create lootgroup for new npc -->
 		<lootgroup name="groupGrandOutdoors" count="all">
 			<item group="groupSpartanFoods"/>
-			<!-- <item name="apparelSuitJacket" mods="modDyePink" mod_chance="1" loot_prob_template="guaranteed"/> -->
-			<item name="apparelSpartanJacket" mod_chance="0"/>
+			<item name="apparelSpartanJacket" mods="0" mod_chance="0"/>
 			<item group="groupGoreResources" count="1,2"/>
 		</lootgroup>
 		

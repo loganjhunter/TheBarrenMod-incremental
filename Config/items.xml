@@ -55,7 +55,7 @@
 	<remove xpath="/items/item[@name='foodCanDogfood']"></remove>
 	<remove xpath="/items/item[@name='foodCanSalmon']"></remove>
 	<remove xpath="/items/item[@name='foodCanPeas']"></remove>
-	<remove xpath="/items/item[@name='foodHoboStew']"></remove>
+	<!-- <remove xpath="/items/item[@name='foodHoboStew']"></remove> -->
 	<remove xpath="/items/item[@name='foodFishTacos']"></remove>
 	<remove xpath="/items/item[@name='foodChiliDog']"></remove>
 	<remove xpath="/items/item[@name='foodBlueberryPie']"></remove>
@@ -422,6 +422,7 @@
 		<item name="apparelSpartanJacket">
 			<property name="Extends" value="apparelCoatJacketGeneric"/>
 			<property name="DescriptionKey" value="apparelSpartanJacketDesc"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
 			<property name="CustomIcon" value="apparelSuitJacket"/>
 			<property name="CustomIconTint" value="218,86,255"/>
 			<property name="SellableToTrader" value="false"/>
@@ -436,10 +437,10 @@
 			</property>
 			<property name="EconomicValue" value="0"/>
 			<effect_group tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".05"/><display_value name="dRunSpeed" value=".05"/>
 <!-- 			<passive_effect name="GeneralDamageResist" operation="base_add" value="0.025">
 				<requirement name="ProgressionLevel" progression_name="perkEnforcerApparel" operation="Equals" value="1"/>
 			</passive_effect> -->

@@ -73,12 +73,13 @@
 	<remove xpath="/recipes/recipe[@name='foodShepardsPie']"></remove>
 	<remove xpath="/recipes/recipe[@name='foodGumboStew']"></remove>
 	<remove xpath="/recipes/recipe[@name='foodTunaFishGravyToast']"></remove>
-	<remove xpath="/recipes/recipe[@name='foodHoboStew']"></remove>
-	<remove xpath="/recipes/recipe[@name='plantedGraceCorn1']"></remove>
+	<!-- <remove xpath="/recipes/recipe[@name='foodHoboStew']"></remove> -->
 	<remove xpath="/recipes/recipe[@name='foodSpaghetti']"></remove>
-
+	<!-- <remove xpath="/recipes/recipe[@name='foodCropGraceCorn']"></remove> -->
 	
 	<!-- Remove unwanted resources -->
+	
+
 	<remove xpath="/recipes/recipe[@name='resourceGlue']"></remove>
 	<remove xpath="/recipes/recipe[@name='resourceLockPick']"></remove>
 	<remove xpath="/recipes/recipe[@name='resourceLockPickBundle']"></remove>
@@ -183,7 +184,21 @@
 	<remove xpath="/recipes/recipe[@name='shotgunTurret']"></remove>
 
 	<append xpath="/recipes">
-	
+		<recipe name="resourceGlue" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkAdvancedEngineering">
+			<ingredient name="resourceBone" count="7"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-1" tags="resourceBone"/>
+			</effect_group>
+		</recipe>
+
+		<recipe name="resourceGlue" count="1" craft_area="chemistryStation" tags="perkAdvancedEngineering,chemStationCrafting">
+			<ingredient name="resourceBone" count="5"/>
+			<ingredient name="drinkJarRiverWater" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-1" tags="resourceBone"/>
+			</effect_group>
+		</recipe>
 	
 		<recipe name="meleeWpnBladeT1HuntingKnife" count="1" tags="learnable,perkDeepCuts">
 			<ingredient name="meleeWpnBladeBrokenHuntingKnife" count="1"/>
